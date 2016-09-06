@@ -1,5 +1,5 @@
 require 'rspec'
-require 'fizzbuzz'
+require 'roman_numeral'
 
 RSpec.configure do |c|
 	c.color = true
