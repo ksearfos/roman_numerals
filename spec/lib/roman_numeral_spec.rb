@@ -56,91 +56,87 @@ describe RomanNumeral do
       end
     end
 
-    xcontext 'when given 40' do
+    context 'when given 40' do
       specify do
-        expect(described_class.for(1)).to eq 'I'
+        expect(described_class.for(40)).to eq 'XL'
       end
     end
 
-    xcontext 'when given 50' do
+    context 'when given 50' do
       specify do
-        expect(described_class.for(1)).to eq 'I'
+        expect(described_class.for(50)).to eq 'L'
       end
     end
 
-    xcontext 'when given 90' do
+    context 'when given 90' do
       specify do
-        expect(described_class.for(1)).to eq 'I'
+        expect(described_class.for(90)).to eq 'XC'
       end
     end
 
-    xcontext 'when given 100' do
+    context 'when given 100' do
       specify do
-        expect(described_class.for(1)).to eq 'I'
+        expect(described_class.for(100)).to eq 'C'
       end
     end
 
-    xcontext 'when given 200' do
+    context 'when given 200' do
       specify do
-        expect(described_class.for(1)).to eq 'I'
+        expect(described_class.for(200)).to eq 'CC'
       end
     end
 
-    xcontext 'when given 400' do
+    context 'when given 400' do
       specify do
-        expect(described_class.for(1)).to eq 'I'
+        expect(described_class.for(400)).to eq 'CD'
       end
     end
 
-    xcontext 'when given 500' do
+    context 'when given 500' do
       specify do
-        expect(described_class.for(1)).to eq 'I'
+        expect(described_class.for(500)).to eq 'D'
       end
     end
 
-    xcontext 'when given 900' do
+    context 'when given 600' do
       specify do
-        expect(described_class.for(1)).to eq 'I'
+        expect(described_class.for(600)).to eq 'DC'
       end
     end
 
-    xcontext 'when given 1000' do
+    context 'when given 900' do
       specify do
-        expect(described_class.for(1)).to eq 'I'
+        expect(described_class.for(900)).to eq 'CM'
       end
     end
 
-    xcontext 'when given 2000' do
+    context 'when given 1000' do
       specify do
-        expect(described_class.for(1)).to eq 'I'
+        expect(described_class.for(1000)).to eq 'M'
       end
     end
 
-    xcontext 'when given 38' do
+    context 'when given 2000' do
       specify do
-        expect(described_class.for(1)).to eq 'I'
+        expect(described_class.for(2000)).to eq 'MM'
       end
     end
 
-    xcontext 'when given 3569' do
+    context 'when given 2378' do
       specify do
-        expect(described_class.for(1)).to eq 'I'
+        expect(described_class.for(2378)).to eq 'MMCCCLXXVIII'
       end
     end
 
-    xcontext 'when given 0' do
+    context 'when given 3564' do
       specify do
-        expect do
-          described_class.for(0)
-        end.to raise_error 'No roman numeral representation for 0'
+        expect(described_class.for(3564)).to eq 'MMMDLXIV'
       end
     end
 
-    xcontext 'when given something that is not a number' do
+    context 'when given 0' do
       specify do
-        expect do
-          described_class.for('a')
-        end.to raise_error 'No roman numeral representation for a'
+        expect(described_class.for(0)).to eq ''
       end
     end
   end
